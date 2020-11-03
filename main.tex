@@ -1,0 +1,130 @@
+%
+% The PyJournal latex template
+% 2020-10-30
+% Template Authors: Jan Vrba, Matous Cejnek
+%
+\documentclass{pjtemplate}
+
+
+\title{\LaTeX ~template for the PyJournal}
+\author{Jan Vrba$^2$, Matous Cejnek$^1$}
+
+% Place 3-7 keywords separated by commas.
+\keywords{
+    Python, \LaTeX, Journal
+}
+
+
+\affiliation{
+\begin{enumerate}
+    \item Corresponding author; Dept. of Instrumentation and Control Engineering, Faculty of Mechanical Engineering, Czech Technical University in Prague, Czech Republic,\\ \texttt{matous.cejnek@fs.cvut.cz}
+    \item Department of Computing and Control Engineering, University of Chemistry and Technology in Prague, Czechia,\\ \texttt{jan.vrba@vscht.cz}
+\end{enumerate}
+}
+
+% Use only if your have to provide funding information on the cover page. Leave blank otherwise.
+\funding{Supported by grant XXX-XXX-XXX-XXX-XXX-XXX.}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The abstract should consist from 5-15 sentences describing your paper. Please introduce here following aspects of your paper in the following order: field, purpose, methodology, results, impact. Every aspect should be described by 1-3 sentences. Avoid citing and cross-referencing in the abstract.
+\end{abstract}
+
+
+\section{Introduction}
+
+This is a \LaTeX~template~\cite{lamport1986latex} for the PyJournal -- journal dedicated to the Python \cite{van1995python} programming language.
+
+\section{Sections and subsections}
+All sections (except Acknowledgment) should be numbered with Arabic numerals.
+
+\subsection{Subsections}
+Subsections should be numbered according to the parent section with Arabic numerals.
+
+\section{Tables, images and equations}
+Only this template can be used for the preparation of your manuscript. Please follow all instructions in this template. Equations can be placed inline:\\ 
+$c^2~=~a^2~+~b^2$; or in a new line with number for referencing:
+\begin{equation}
+   c^2 = a^2 + b^2 
+\end{equation}
+
+\noindent
+The figures suppose to be placed on relevant place in the body of the paper. See Figure~\ref{fig:example} for example. Keep in mind that the resolution and size of figures should be reasonable.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.\textwidth]{example.png}
+\caption{All figures should have relevant caption.}
+\label{fig:example}
+\end{figure}
+
+\noindent
+The tables should look like the Table~\ref{tab:example}.
+
+\begin{table}[h!]
+\centering
+\caption{Example table displaying random data for random fictive persons}
+\label{tab:example}
+
+\begin{tabular}{c|c|c|c|c}
+      & minimum & maximum & mean & std \\ \hline
+Alice & 131     & 175     & 150  & 6   \\
+Bob   & 158     & 211     & 201  & 8   \\
+Carla & 136     & 350     & 183  & 10 
+\end{tabular}
+\end{table}
+
+
+
+
+\section{Algorithms and snippets}
+
+All code snippets should be placed via \emph{lstlisting} environment. Use caption and and label as shown in example Listing~\ref{lst:example}.
+
+
+\begin{lstlisting}[caption={The following code snippet displays a solution of the Fizz Buzz problem.},label={lst:example},language=Python]
+for number in range(1,100):
+    text = "Fizz" if not number % 3 else ""
+    text = text + "Buzz" if not number % 5 else text
+    text = text if text else number
+    print(text, end=" ")
+\end{lstlisting}
+
+\noindent
+All algorithms should be displayed via \emph{algorithm2e} environment. Use caption and and label as shown in example Algorithm~\ref{alg:example}.
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwResult{Write here the result }
+ initialization\;
+ \While{While condition}{
+  instructions\;
+  \eIf{condition}{
+   instructions1\;
+   instructions2\;
+   }{
+   instructions3\;
+  }
+ }
+ \caption{Algorithm example}\label{alg:example}
+\end{algorithm}
+
+
+
+
+\section{Conclusion}
+
+Make sure that you double check all requirements before you submit your manuscript.
+
+
+\section*{Acknowledgement}
+
+Acknowledgment is a place where you should mention all external support used for creation of the paper. It should be written in the third person.
+
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}
