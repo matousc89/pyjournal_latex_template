@@ -50,21 +50,22 @@ $c^2~=~a^2~+~b^2$; or in a new line with number for referencing:
 \begin{equation}
    c^2 = a^2 + b^2 
 \end{equation}
+All symbols used in equations have to be properly introduced.
 
-\noindent
+
 The figures suppose to be placed on relevant place in the body of the paper. See Figure~\ref{fig:example} for example. Keep in mind that the resolution and size of figures should be reasonable.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=1.\textwidth]{example.png}
 \caption{All figures should have relevant caption.}
 \label{fig:example}
 \end{figure}
 
-\noindent
+
 The tables should look like the Table~\ref{tab:example}.
 
-\begin{table}[h!]
+\begin{table}[!ht]
 \centering
 \caption{Example table displaying random data for random fictive persons}
 \label{tab:example}
@@ -93,7 +94,7 @@ for number in range(1,100):
     print(text, end=" ")
 \end{lstlisting}
 
-\noindent
+
 All algorithms should be displayed via \emph{algorithm2e} environment. Use caption and and label as shown in example Algorithm~\ref{alg:example}.
 
 \begin{algorithm}[H]
@@ -122,7 +123,7 @@ Make sure that you double check all requirements before you submit your manuscri
 
 \section*{Acknowledgement}
 
-Acknowledgment is a place where you should mention all external support used for creation of the paper. It should be written in the third person.
+Acknowledgment is a place where you should mention all external support used for creation of the paper. This section should be written in the third person.
 
 
 \bibliographystyle{unsrt}

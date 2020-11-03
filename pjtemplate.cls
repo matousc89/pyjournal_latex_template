@@ -13,6 +13,7 @@
 
 
 \pagenumbering{gobble}
+\setlength{\parindent}{0pt}
 
 \def\affiliation#1{\def\@affiliation{#1}}
 \def\funding#1{\def\@funding{#1}}
